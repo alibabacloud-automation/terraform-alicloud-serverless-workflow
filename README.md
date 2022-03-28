@@ -12,15 +12,18 @@ These types of resources are supported:
 ```hcl
 module "example" {
   source      = "terraform-alicloud-modules/serverless-workflow/alicloud"
+  create_flow = true
   description = "your_description"
   name        = "your_name"
   type        = "DEFAULT"
 
-  execution_name = "your_execution_name"
-  flow_name      = "your_flow_name"
-  input          = "your_input"
-  status         = "your_status"
+  create_execution = true
+  execution_name   = "your_execution_name"
+  flow_name        = "your_flow_name"
+  input            = "your_input"
+  status           = "your_status"
 
+  create_schedule = true
   cron_expression = "your_cron_expression"
   schedule_name   = "your_schedule_name"
   payload         = "your_payload"

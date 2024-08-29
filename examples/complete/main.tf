@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
+
 module "fnf" {
   source = "../.."
   #  alicloud_fnf_flow

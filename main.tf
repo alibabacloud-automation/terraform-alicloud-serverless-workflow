@@ -1,5 +1,5 @@
 locals {
-  flow_name = var.flow_name != "" ? var.flow_name : concat(alicloud_fnf_flow.flow.*.name, [""])[0]
+  flow_name = var.flow_name != "" ? var.flow_name : concat(alicloud_fnf_flow.flow[*].name, [""])[0]
 }
 
 

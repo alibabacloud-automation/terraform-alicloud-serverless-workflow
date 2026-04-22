@@ -38,10 +38,3 @@ variable "schedule_description" {
   default     = "module_schedule_description"
 }
 
-variable "config_rule_ids" {
-  type = list(object({
-    config_rule_id = string
-  }))
-  description = ""
-  default     = []
-}
